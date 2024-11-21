@@ -108,6 +108,7 @@ main {
   padding: 13px;
   background-color: rgba(164, 69, 237, 0.3);
   border: none;
+  cursor: pointer;
 }
 
 
@@ -269,5 +270,4 @@ text-decoration-style: solid;
   body {
     padding-inline: 352px;
   }
-  
 }
