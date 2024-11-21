@@ -1,0 +1,216 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  font-family: "Inconsolata", sans-serif;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+ul, ol {
+  list-style: circle;
+}
+
+select {
+  width: 70px;
+  margin-right: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.dark-icon {
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: baseline;
+}
+
+select {
+  border: none;
+}
+
+main {
+  padding-inline: 24px;
+}
+
+.search-bar {
+  width: 327px;
+  border: none;
+  border-radius: 16px;
+  padding-block: 16px;
+  padding-left: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16.78px;
+  text-align: left;
+  color: rgba(45, 45, 45, 1);
+  background: url("../images/search-icon.svg") center no-repeat rgba(244, 244, 244, 1);;
+  background-position: right 5% center;
+}
+
+
+.search-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 23px 32px;
+}
+
+.run button {
+  border-radius: 50%;
+  padding: 13px;
+  background-color: rgba(164, 69, 237, 0.3);
+  border: none;
+}
+
+
+/* switch */
+.switch {
+  appearance: none;
+  background-color: rgb(207, 216, 239);
+  height: 20px;
+  width: 35px;
+  display: inline-flex;
+  margin-top: 4px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 3px;
+  transition: all .8s ease-in-out;
+}
+
+.switch:after {
+  content: "";
+  background-color: white;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.switch:checked {
+  background-color: rgba(164, 69, 237, 1)
+}
+
+.switch:checked:after {
+  transform: translateX(100%);
+}
+
+h6 {
+  color: rgba(45, 45, 45, 1);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 23.04px;
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+ul {
+  color: rgba(117, 117, 117, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16.78px;
+  margin-bottom: 16px;
+}
+
+li {
+  color: rgba(45, 45, 45, 1);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-block: 13px;
+}
+
+.weird-area {
+  display: flex;
+  gap: 40px;
+  align-items: baseline;
+}
+
+.weird-area span {
+  color: rgba(117, 117, 117, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16.78px;
+}
+
+.weird-area h6 {
+  color: rgba(164, 69, 237, 1);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16.78px;
+}
+
+p {
+  color: rgba(117, 117, 117, 1);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 13px;
+}
+
+
+footer {
+  margin-top: 60px;
+  padding-inline: 24px;
+}
+
+footer h5 {
+  color: rgba(117, 117, 117, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.92px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  margin-bottom: 7px;
+}
+
+footer a {
+color: rgba(45, 45, 45, 1);
+font-size: 14px;
+font-weight: 400;
+line-height: 17.92px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+}
+
