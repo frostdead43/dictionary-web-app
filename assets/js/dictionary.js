@@ -1,5 +1,7 @@
 const inputSearch = document.querySelector(".search-bar");
 const contentArea = document.querySelector(".content");
+const footerArea = document.querySelector(".footer-area");
+
 
 async function getFetch() {
   
@@ -16,7 +18,7 @@ for (const data of dictionaryData) {
           <span>${data.phonetic || "No phonetic available"}</span>
         </div>
         <div class="run">
-          <button><img src="assets/images/run-icon.svg"></button>
+          <button class="run-btn"><img src="assets/images/run-icon.svg"></button>
         </div>
       </div>
       `
@@ -48,31 +50,44 @@ for (const data of dictionaryData) {
 
         })
       }
-  //     for (const url of data.sourceUrls) {
-  //       contentArea.innerHTML += `<footer>
-  //    <h5>Source</h5> 
-  //    <a href="${url}">${url}</a> 
-  // </footer>`
-  //     }
-      }
-  
     }
+    for (const url of data.sourceUrls) {
+      footerArea.innerHTML = 
+      `
+      <h5>Source</h5> 
+      <a href="${url}">${url}</a> `
+    }
+
+    for (const phonetic of data.phonetics) {
+
+      if (phonetic.audio) {
+        const runBtns = contentArea.querySelectorAll(".run-btn");
+        for (const btn of runBtns) {
+          btn.addEventListener("click",function() {
+           contentArea.innerHTML += `<audio class ="hidden" controls autoplay src="${phonetic.audio}"></audio>`;
+        })
+      }
+    
+    }
+  
+  }
   break;
   }
+}
 }
 
 function getFormData() {
   formId.addEventListener("submit", function(e) {
-    e.preventDefault();
+    e.preventDefault(); 
     console.log("form gönderildi");
     getFetch();
+    inputSearch.value = "";
   })
 }
 
 getFormData();
 
   
-
 
 
 
