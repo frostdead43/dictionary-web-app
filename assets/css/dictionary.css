@@ -186,11 +186,12 @@ li::marker {
   line-height: 16.78px;
 }
 
-.weird-area h6 {
+.synonyms-btn {
   color: rgba(164, 69, 237, 1);
   font-size: 16px;
   font-weight: 700;
   line-height: 16.78px;
+  cursor: pointer;
 }
 
 p {
