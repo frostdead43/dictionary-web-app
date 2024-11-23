@@ -87,7 +87,21 @@ function getFormData() {
 
 getFormData();
 
-  
+
+
+function changeFont() {
+  const fontSelect = document.getElementById('fontSelect');
+  fontSelect.addEventListener('change', function() {
+    const selectedOption = fontSelect.options[fontSelect.selectedIndex];
+    const font = selectedOption.getAttribute('data-font'); 
+    document.body.style.fontFamily = font;
+})
+}
+
+changeFont();
+
+
+
 
 
 

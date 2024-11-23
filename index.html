@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Sevillana&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/dictionary.css">
   <script src="assets/js/dictionary.js" defer></script>
   <title>Dictionary App</title>
@@ -17,10 +17,11 @@
     </div>
 
     <div>
-      <select name="options" id="">
-        <option value="sans">sans</option>
-        <option value="sans-serif">sans-serif</option>
-        <option value="mono">mono</option>
+      <select name="options" id="fontSelect">
+        <option value="inconsolata" data-font="Inconsolata">inconsolata</option>
+        <option value="sans-serif" data-font="sans-serif">sans-serif</option>
+        <option value="mono" data-font="mono">mono</option>
+        <option value="sevillana" data-font="Sevillana">Sevillana</option>
       </select>
       <input class="switch" type="checkbox">
       <img class="dark-icon" src="assets/images/dark-mode icon.svg">
@@ -33,36 +34,11 @@
     </form>
   
     <div class="content">
-    <!-- <div class="search-area">
-      <div>
-        <h2>Keyboard</h2>
-        <span>/ˈkiːbɔːd/</span>
-      </div>
-      <div class="run">
-        <button><img src="assets/images/run-icon.svg"></button>
-      </div>
-    </div>
-    <h6>noun</h6>
-
-    <ul>Meaning</ul>
-    <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
-    <li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
-    <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
-    <div class="weird-area">
-      <span>Synonyms</span>
-      <h6>electronic keyboard</h6>
-    </div>
-
-    <h6>noun</h6>
-    <ul>Meaning</ul>
-    <li>To type on a computer keyboard.</li>
-    <p>“Keyboarding is the part of this job I hate the most.”</p> -->
   </div>
   </main>
 
   <footer class="footer-area">
-    <!-- <h5>Source</h5>
-    <a href="">https://en.wiktionary.org/wiki/keyboard</a> -->
+
   </footer>
 
 </body>
