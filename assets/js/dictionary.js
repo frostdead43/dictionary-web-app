@@ -1,7 +1,7 @@
 const inputSearch = document.querySelector(".search-bar");
 const contentArea = document.querySelector(".content");
 const footerArea = document.querySelector(".footer-area");
-
+const switchButton = document.querySelector(".switch");
 
 async function getFetch() {
   
@@ -58,6 +58,7 @@ for (const data of dictionaryData) {
       <a href="${url}">${url}</a> `
     }
 
+    //sorun burada
     for (const phonetic of data.phonetics) {
 
       if (phonetic.audio) {
@@ -102,6 +103,12 @@ changeFont();
 
 
 
+function switchTheme() {
+  switchButton.addEventListener("click",function(){
+    document.querySelector("body").classList.toggle("dark-mode");
+  })
+}
 
+switchTheme();
 
 

@@ -17,6 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: white;
   font-family: "Inconsolata", sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* 5. Improve media defaults */
@@ -67,6 +68,14 @@ header {
 
 select {
   border: none;
+  background-color: transparent;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+option {
+  background-color: white;
+  font-weight: bolder;
 }
 
 main {
@@ -228,11 +237,46 @@ text-decoration-line: underline;
 text-decoration-style: solid;
 }
 
-
 .hidden {
   display: none;
 }
 
+
+/* dark mode */
+
+.dark-mode {
+
+  background: rgba(5, 5, 5, 1);
+  
+  h2,h6{
+    color: white;
+  }
+  li {
+    color: white;
+  }
+
+  .search-bar {
+    background-color: rgba(31, 31, 31, 1);
+    color: white;
+    border: 1px solid rgba(164, 69, 237, 1);
+  }
+
+  select {
+    background-color: transparent;
+    color: white;
+  }
+
+  option {
+    background-color: rgba(31, 31, 31, 1);
+  }
+  option:hover {
+    color: rgba(164, 69, 237, 1);
+  }
+
+  footer a {
+    color: white;
+  }
+}
 
 @media (width >= 768px) {
   header {
@@ -243,6 +287,8 @@ text-decoration-style: solid;
   }
   footer {
     padding-inline: 40px;
+    display: flex;
+    gap: 25px;
   }
 
   .search-area h2 {
